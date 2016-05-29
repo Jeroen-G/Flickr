@@ -1,0 +1,40 @@
+{
+    "name": "jeroen-g/flickr",
+    "description": "Modern PHP package to make Flickr API calls. Ships with Laravel implementation.",
+    "keywords": [
+        "JeroenG",
+        "Flickr",
+        "API",
+        "PHP",
+        "Laravel"
+    ],
+    "homepage": "https://github.com/Jeroen-G/Flickr",
+    "license": "EUPL-1.1",
+    "authors": [
+        {
+            "name": "JeroenG",
+            "email": "jeroengjeroeng@gmail.com",
+            "homepage": "https://github.com/Jeroen-G"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0",
+        "guzzlehttp/guzzle" : "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*"
+    },
+    "suggest": {
+        "illuminate/support": "This package provides a Laravel Service Provider"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeroenG\\Flickr\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
