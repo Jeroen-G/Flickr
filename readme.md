@@ -1,4 +1,4 @@
-# :package_name
+# PHP Flickr API
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Quality Score][ico-code-quality]][link-code-quality]
