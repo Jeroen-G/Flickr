@@ -8,28 +8,28 @@ class Api
 {
     /**
      * Flickr API key.
-     * 
+     *
      * @var string
      */
     protected $key;
 
     /**
      * Guzzle Client instance.
-     * 
+     *
      * @var \GuzzleHttp\Client
      */
     protected $client;
 
     /**
      * Flickr API response format.
-     * 
+     *
      * @var string
      */
     public $format;
 
     /**
      * Create a new Flickr Api instance.
-     * 
+     *
      * @param  string $apiKey
      * @param  string $format
      * @param  string $endpoint
@@ -48,7 +48,7 @@ class Api
 
     /**
      * Make a Flickr API request.
-     * 
+     *
      * @param  string                   $call
      * @param  array|null               $parameters
      * @return \JeroenG\Flickr\Response
@@ -66,7 +66,7 @@ class Api
 
     /**
      * Compile the standard API part of the REST request.
-     * 
+     *
      * @return string
      */
     protected function api()
@@ -76,13 +76,13 @@ class Api
 
     /**
      * Compile the parameters from an array into a string.
-     * 
+     *
      * @param  array  $array
      * @return string
      */
     protected function parameters($array)
     {
-        if ( ! is_array($array)) {
+        if (! is_array($array)) {
             return;
         }
         $encoded = [];
