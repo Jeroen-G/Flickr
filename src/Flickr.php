@@ -6,14 +6,14 @@ class Flickr
 {
     /**
      * Flickr API class instance.
-     * 
+     *
      * @var \JeroenG\Flickr\Api
      */
     public $api;
 
     /**
      * Create a new Flickr instance.
-     * 
+     *
      * @param \JeroenG\Flickr\Api $api
      */
     public function __construct(Api $api)
@@ -23,7 +23,7 @@ class Flickr
 
     /**
      * Make a Flickr API request.
-     * 
+     *
      * @param  string                   $method
      * @param  array|null               $parameters
      * @return \JeroenG\Flickr\Response
@@ -35,7 +35,7 @@ class Flickr
 
     /**
      * Flickr echo request, for testing purposes.
-     * 
+     *
      * @param  string                   $string
      * @return \JeroenG\Flickr\Response
      */
@@ -46,7 +46,7 @@ class Flickr
 
     /**
      * Get a list of photosets.
-     * 
+     *
      * @param  array|null               $parameters
      * @return \JeroenG\Flickr\Response
      */
@@ -77,7 +77,7 @@ class Flickr
 
     /**
      * Get all info on a photo.
-     * 
+     *
      * @param  string                   $photoId
      * @param  string|null              $secretId
      * @return \JeroenG\Flickr\Response
@@ -86,7 +86,7 @@ class Flickr
     {
         $parameters['photo_id'] = $photoId;
 
-        if ( ! is_null($secretId)) {
+        if (! is_null($secretId)) {
             $parameters['secret'] = $secretId;
         }
 

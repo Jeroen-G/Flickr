@@ -8,14 +8,14 @@ class Response
 {
     /**
      * The contents of the Guzzle response.
-     * 
+     *
      * @var object
      */
     protected $contents;
 
     /**
      * Create a new Response instance.
-     * 
+     *
      * @param \Psr\Http\Message\ResponseInterface $guzzleResponse
      */
     public function __construct(ResponseInterface $guzzleResponse)
@@ -25,7 +25,7 @@ class Response
 
     /**
      * Get the status of the Flickr API call.
-     * 
+     *
      * @return string
      */
     public function getStatus()
@@ -35,7 +35,7 @@ class Response
 
     /**
      * Get a '_content' value from the contents of the Flickr API call.
-     * 
+     *
      * @param  string $method
      * @return string
      */
@@ -46,7 +46,7 @@ class Response
 
     /**
      * Get magically a regular value from the contents of the Flickr API call.
-     * 
+     *
      * @param  string $variable
      * @return mixed
      */
