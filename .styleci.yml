@@ -1,1 +1,2 @@
-preset: psr2
+preset: laravel
+linting: true
