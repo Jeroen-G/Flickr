@@ -18,11 +18,10 @@
         }
     ],
     "require": {
-        "php" : "~5.5|~7.0",
         "guzzlehttp/guzzle" : "~6.0"
     },
     "require-dev": {
-        "phpunit/phpunit" : "4.*"
+        "phpunit/phpunit" : "~6.0"
     },
     "suggest": {
         "illuminate/support": "This package provides a Laravel Service Provider"
@@ -33,8 +32,13 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+        "laravel": {
+            "providers": [
+                "JeroenG\\Flickr\\FlickrServiceProvider"
+            ],
+            "aliases": {
+                "Activity": "JeroenG\\Flickr\\FlickrLaravelFacade"
+            }
         }
     }
 }

@@ -1,8 +1,16 @@
 # Changelog
 
-All Notable changes will be documented in this file.
+All notable changes will be documented in this file.
 
-## Version 0.1 - to be released
+## Version 1.1
+
+### Added
+- Support for Laravel 5.5
+
+### Fixed
+- Default API call set to php_serial instead of rest.
+
+## Version 1.0
 
 ### Added
 - Ability to make basic API calls to Flickr.

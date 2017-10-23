@@ -37,6 +37,7 @@ $result = $flickr->request('flickr.method', $arrayOfParameters);
 Add the Service Provider and (optionally) the facade to config/app.php:
 `JeroenG\Flickr\FlickrServiceProvider::class,`
 `'Flickr' => JeroenG\Flickr\FlickrLaravelFacade::class,`
+This is done automatically in Laravel 5.5 with package discovery.
 In your .env file, set a `FLICKR_KEY` and `FLICKR_SECRET` with your Flickr API key and secret. More information on this is found [here](https://www.flickr.com/services/api/keys/).
 
 The functions act mostly the same as above, for example:
