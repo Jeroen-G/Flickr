@@ -35,7 +35,7 @@ class Api
      * @param  string $endpoint
      * @return void
      */
-    public function __construct($apiKey, $format = 'rest', $endpoint = 'https://api.flickr.com/services/rest/')
+    public function __construct($apiKey, $format = 'php_serial', $endpoint = 'https://api.flickr.com/services/rest/')
     {
         $this->key = $apiKey;
         $this->format = $format;
