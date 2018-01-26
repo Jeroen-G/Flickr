@@ -37,7 +37,7 @@
                 "JeroenG\\Flickr\\FlickrServiceProvider"
             ],
             "aliases": {
-                "Activity": "JeroenG\\Flickr\\FlickrLaravelFacade"
+                "Flickr": "JeroenG\\Flickr\\FlickrLaravelFacade"
             }
         }
     }
