@@ -20,7 +20,7 @@ class FlickrServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('flickr', function ($app) {
-            $api = new Api(env('FLICKR_KEY'));
+            $api = new Api(config('services.flickr.key', env('FLICKR_KEY')));
 
             return new Flickr($api);
         });
