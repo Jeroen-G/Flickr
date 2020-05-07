@@ -2,6 +2,11 @@
 
 All notable changes will be documented in this file.
 
+## Version 1.2
+
+### Changed
+- For Laravel the Flickr API key should now be stored in config/services.php
+
 ## Version 1.1
 
 ### Added
