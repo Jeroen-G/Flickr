@@ -2,6 +2,11 @@
 
 All notable changes will be documented in this file.
 
+## Version 2.0
+
+### Changed
+- Modernized codebase, now requires PHP 7.4.
+
 ## Version 1.2
 
 ### Changed

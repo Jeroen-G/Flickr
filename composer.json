@@ -18,10 +18,11 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle" : "^6.0|^7.0"
+        "php": "^7.4",
+        "guzzlehttp/guzzle" : "^7.0"
     },
     "require-dev": {
-        "phpunit/phpunit" : "^7.0"
+        "phpunit/phpunit" : "^9.0"
     },
     "suggest": {
         "illuminate/support": "This package provides a Laravel Service Provider"

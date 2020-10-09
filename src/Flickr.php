@@ -4,66 +4,39 @@ namespace JeroenG\Flickr;
 
 class Flickr
 {
-    /**
-     * Flickr API class instance.
-     *
-     * @var \JeroenG\Flickr\Api
-     */
-    public $api;
+    public Api $api;
 
-    /**
-     * Create a new Flickr instance.
-     *
-     * @param \JeroenG\Flickr\Api $api
-     */
     public function __construct(Api $api)
     {
         $this->api = $api;
     }
 
-    /**
-     * Make a Flickr API request.
-     *
-     * @param  string                   $method
-     * @param  array|null               $parameters
-     * @return \JeroenG\Flickr\Response
-     */
-    public function request($method, $parameters = null)
+
+    public function request(string $method, ?array $parameters = null): Response
     {
         return $this->api->request($method, $parameters);
     }
 
     /**
      * Flickr echo request, for testing purposes.
-     *
-     * @param  string                   $string
-     * @return \JeroenG\Flickr\Response
      */
-    public function echoThis($string)
+    public function echoThis(string $string): Response
     {
         return $this->request('flickr.test.echo', ['this' => $string]);
     }
 
     /**
      * Get a list of photosets.
-     *
-     * @param  array|null               $parameters
-     * @return \JeroenG\Flickr\Response
      */
-    public function listSets($parameters = null)
+    public function listSets(?array $parameters = null): Response
     {
         return $this->request('flickr.photosets.getList', $parameters);
     }
 
     /**
      * Get all photos in a photoset.
-     *
-     * @param  string                   $setId
-     * @param  string                   $userId
-     * @param  array|null               $otherParameters
-     * @return \JeroenG\Flickr\Response
      */
-    public function photosForSet($setId, $userId, $otherParameters = null)
+    public function photosForSet(string $setId, string $userId, ?array $otherParameters = null): Response
     {
         $parameters['photoset_id'] = $setId;
         $parameters['user_id'] = $userId;
@@ -77,12 +50,8 @@ class Flickr
 
     /**
      * Get all info on a photo.
-     *
-     * @param  string                   $photoId
-     * @param  string|null              $secretId
-     * @return \JeroenG\Flickr\Response
      */
-    public function photoInfo($photoId, $secretId = null)
+    public function photoInfo(string $photoId, ?string $secretId = null): Response
     {
         $parameters['photo_id'] = $photoId;
 

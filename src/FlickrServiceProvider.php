@@ -6,18 +6,12 @@ use Illuminate\Support\ServiceProvider;
 
 class FlickrServiceProvider extends ServiceProvider
 {
-    /**
-     * Perform post-registration booting of services.
-     */
-    public function boot()
+    public function boot(): void
     {
         //
     }
 
-    /**
-     * Register any package services.
-     */
-    public function register()
+    public function register(): void
     {
         $this->app->singleton('flickr', function ($app) {
             $api = new Api(config('services.flickr.key', env('FLICKR_KEY')));
@@ -26,12 +20,7 @@ class FlickrServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
+    public function provides(): array
     {
         return ['flickr'];
     }

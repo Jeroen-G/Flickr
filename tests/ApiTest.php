@@ -1,10 +1,11 @@
 <?php
 
+use JeroenG\Flickr\Flickr;
 use PHPUnit\Framework\TestCase;
 
 class ApiTest extends TestCase
 {
-    public $flickr;
+    public Flickr $flickr;
 
     public function __construct()
     {
@@ -14,7 +15,7 @@ class ApiTest extends TestCase
         $this->flickr = new JeroenG\Flickr\Flickr($api);
     }
 
-    public function testEcho()
+    public function testEcho(): void
     {
         $test = $this->flickr->echoThis('helloworld');
 
