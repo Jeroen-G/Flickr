@@ -11,7 +11,6 @@ class Flickr
         $this->api = $api;
     }
 
-
     public function request(string $method, ?array $parameters = null): Response
     {
         return $this->api->request($method, $parameters);
