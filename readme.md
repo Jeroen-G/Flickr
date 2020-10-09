@@ -1,7 +1,6 @@
 # PHP Flickr API
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![StyleCI][ico-styleci]][link-styleci]
 
 Modern PHP package to make Flickr API calls. Ships with Laravel implementation.
@@ -69,11 +68,9 @@ Please see [contributing](contributing.md) for details.
 The EUPL License. Please see the [License File](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/jeroen-g/flickr.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/jeroen-g/flickr.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/59955535/shield
 
 [link-packagist]: https://packagist.org/packages/jeroen-g/flickr
-[link-code-quality]: https://scrutinizer-ci.com/g/jeroen-g/flickr
 [link-styleci]: https://styleci.io/repos/59955535
 [link-author]: https://github.com/Jeroen-G
 [link-contributors]: ../../contributors
