@@ -43,7 +43,7 @@ class Api
 
     protected function parameters(array $array): string
     {
-        if (!is_array($array)) {
+        if (! is_array($array)) {
             return '';
         }
 
