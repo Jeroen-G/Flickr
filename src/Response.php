@@ -6,7 +6,7 @@ use Psr\Http\Message\ResponseInterface;
 
 class Response
 {
-    protected object $contents;
+    protected array $contents;
 
     public function __construct(ResponseInterface $guzzleResponse)
     {
