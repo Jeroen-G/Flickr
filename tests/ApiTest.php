@@ -22,8 +22,8 @@ class ApiTest extends TestCase
     public function testEcho(): void
     {
         $test = $this->flickr->echoThis('helloworld');
-
-        $this->assertEquals('ok', $test->stat);
-        $this->assertEquals('php_serial', $test->getContent('format'));
+        self::assertEquals('ok', $test->stat);
+        self::assertEquals('php_serial', $test->getContent('format'));
+        self::assertEquals('helloworld', $test->getContent('this'));
     }
 }
