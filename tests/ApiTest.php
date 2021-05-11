@@ -9,6 +9,8 @@ class ApiTest extends TestCase
 
     public function __construct()
     {
+        $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+        $dotenv->safeLoad();
         parent::__construct();
 
         $api = new JeroenG\Flickr\Api($_ENV['FLICKR_KEY'], 'php_serial');
