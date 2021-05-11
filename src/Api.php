@@ -20,14 +20,19 @@ class Api
         $this->key = $apiKey;
         $this->format = $format;
 
-        $this->client = new Client([
-            'base_uri' => $endpoint,
-        ]);
+        $this->client = new Client(
+            [
+                'base_uri' => $endpoint,
+            ]
+        );
     }
 
     public function request(string $call, ?array $parameters = null)
     {
-        $guzzleResponse = $this->client->get($this->api().'&method='.$call.$this->parameters($parameters));
+        $guzzleResponse = $this->client->get(
+            $this->api() . '&method=' .
+            $call . $this->parameters($parameters)
+        );
 
         if ($guzzleResponse->getStatusCode() === 200) {
             return new Response($guzzleResponse);
