@@ -30,8 +30,8 @@ class Api
     public function request(string $call, ?array $parameters = null)
     {
         $guzzleResponse = $this->client->get(
-            $this->api() . '&method=' .
-            $call . $this->parameters($parameters)
+            $this->api().'&method='.
+            $call.$this->parameters($parameters)
         );
 
         if ($guzzleResponse->getStatusCode() === 200) {
