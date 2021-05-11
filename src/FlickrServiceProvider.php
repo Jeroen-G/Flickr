@@ -13,11 +13,14 @@ class FlickrServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->app->singleton('flickr', function ($app) {
-            $api = new Api(config('services.flickr.key', env('FLICKR_KEY')));
+        $this->app->singleton(
+            'flickr',
+            function ($app) {
+                $api = new Api(config('services.flickr.key', env('FLICKR_KEY')));
 
-            return new Flickr($api);
-        });
+                return new Flickr($api);
+            }
+        );
     }
 
     public function provides(): array

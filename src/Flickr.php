@@ -35,8 +35,11 @@ class Flickr
     /**
      * Get all photos in a photoset.
      */
-    public function photosForSet(string $setId, string $userId, ?array $otherParameters = null): Response
-    {
+    public function photosForSet(
+        string $setId,
+        string $userId,
+        ?array $otherParameters = null
+    ): Response {
         $parameters['photoset_id'] = $setId;
         $parameters['user_id'] = $userId;
 

@@ -15,8 +15,8 @@ class ApiTest extends TestCase
         $dotenv->safeLoad();
         parent::__construct();
 
-        $api = new JeroenG\Flickr\Api($_ENV['FLICKR_KEY'], 'php_serial');
-        $this->flickr = new JeroenG\Flickr\Flickr($api);
+        $api = new Api($_ENV['FLICKR_KEY'], 'php_serial');
+        $this->flickr = new Flickr($api);
     }
 
     public function testEcho(): void
